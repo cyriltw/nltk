@@ -29,9 +29,14 @@ comparison between the arguments.
 
 The simplest way to initialize an AnnotationTask is with a list of triples,
 each containing a coder's assignment for one object in the task:
+    task = AnnotationTask(data=[('c1', 'i1', 'k1'),('c2', 'i1', 'k1'),('c1', 'i2', 'k2'),('c2', 'i2', 'k1'),...]) 
+here; 
+    c1,c2 = coder identifier
+    i1,i2 = item identifier
+    k1,k2 = potential categories available to be assigned. 
 
+In usage;
     task = AnnotationTask(data=[('c1', '1', 'v1'),('c2', '1', 'v1'),...])
-
 Note that the data list needs to contain the same number of triples for each
 individual coder, containing category values for the same set of items.
 
